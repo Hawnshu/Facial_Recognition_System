@@ -1,6 +1,10 @@
 from tkinter import*
 from tkinter import ttk
 from PIL import Image,ImageTk
+import os
+from student import Student
+from train import Train
+
 
 
 class Face_Recognition_System:
@@ -11,7 +15,7 @@ class Face_Recognition_System:
 
 #1st Image
 
-        img=Image.open(r"C:\Users\shudh\Desktop\Face_Recognition_System\Images\Stanford.jpg")
+        img=Image.open(r"Images\Stanford.jpg")
         img=img.resize((550,130),Image.LANCZOS)
         self.photoimg=ImageTk.PhotoImage(img)
 
@@ -20,7 +24,7 @@ class Face_Recognition_System:
 
 #2nd Image
 
-        img1=Image.open(r"C:\Users\shudh\Desktop\Face_Recognition_System\Images\facialrecognition.png")
+        img1=Image.open(r"Images\facialrecognition.png")
         img1=img1.resize((515,130),Image.LANCZOS)
         self.photoimg1=ImageTk.PhotoImage(img1)
 
@@ -29,7 +33,7 @@ class Face_Recognition_System:
 
 #3rd Image
 
-        img2=Image.open(r"C:\Users\shudh\Desktop\Face_Recognition_System\Images\u.jpg")
+        img2=Image.open(r"Images\u.jpg")
         img2=img2.resize((550,130),Image.LANCZOS)
         self.photoimg2=ImageTk.PhotoImage(img2)
 
@@ -38,7 +42,7 @@ class Face_Recognition_System:
 
 #BG Image
 
-        img3=Image.open(r"C:\Users\shudh\Desktop\Face_Recognition_System\Images\wp2551980.jpg")
+        img3=Image.open(r"Images\wp2551980.jpg")
         img3=img3.resize((1550,680),Image.ANTIALIAS)
         self.photoimg3=ImageTk.PhotoImage(img3)
 
@@ -54,21 +58,21 @@ class Face_Recognition_System:
 
 #Student Button
         
-        img4=Image.open(r"C:\Users\shudh\Desktop\Face_Recognition_System\Images\gettyimages-1022573162.jpg")
+        img4=Image.open(r"Images\gettyimages-1022573162.jpg")
         img4=img4.resize((220,220),Image.ANTIALIAS)
         self.photoimg4=ImageTk.PhotoImage(img4)
 
-        b1=Button(bg_img,image=self.photoimg4,cursor="hand2")
+        b1=Button(bg_img,image=self.photoimg4,command=self.Student_details,cursor="hand2")
         b1.place(x=200,y=100,width=220,height=220)
 
-        b1_1=Button(bg_img,text="Student Details",cursor="hand2",font=("coolvetica",15,"bold"),
+        b1_1=Button(bg_img,text="Student Details",command=self.Student_details,cursor="hand2",font=("coolvetica",15,"bold"),
                         bg="darkblue",fg="white")
         b1_1.place(x=200,y=300,width=220,height=40)
 
 
 #Detect Face Button
         
-        img5=Image.open(r"C:\Users\shudh\Desktop\Face_Recognition_System\Images\face_detector1.jpg")
+        img5=Image.open(r"Images\face_detector1.jpg")
         img5=img5.resize((220,220),Image.ANTIALIAS)
         self.photoimg5=ImageTk.PhotoImage(img5)
 
@@ -82,7 +86,7 @@ class Face_Recognition_System:
 
  #Attendance Button
         
-        img6=Image.open(r"C:\Users\shudh\Desktop\Face_Recognition_System\Images\report.jpg")
+        img6=Image.open(r"Images\report.jpg")
         img6=img6.resize((220,220),Image.ANTIALIAS)
         self.photoimg6=ImageTk.PhotoImage(img6)
 
@@ -96,7 +100,7 @@ class Face_Recognition_System:
 
 #Help Button
         
-        img7=Image.open(r"C:\Users\shudh\Desktop\Face_Recognition_System\Images\help.jpg")
+        img7=Image.open(r"Images\help.jpg")
         img7=img7.resize((220,220),Image.ANTIALIAS)
         self.photoimg7=ImageTk.PhotoImage(img7)
 
@@ -110,34 +114,34 @@ class Face_Recognition_System:
 
  #Train Button
         
-        img8=Image.open(r"C:\Users\shudh\Desktop\Face_Recognition_System\Images\Train.jpg")
+        img8=Image.open(r"Images\Train.jpg")
         img8=img8.resize((220,220),Image.ANTIALIAS)
         self.photoimg8=ImageTk.PhotoImage(img8)
 
-        b5=Button(bg_img,image=self.photoimg8,cursor="hand2")
+        b5=Button(bg_img,image=self.photoimg8,cursor="hand2",command=self.train_data)
         b5.place(x=200,y=380,width=220,height=220)
 
-        b5_1=Button(bg_img,text="Train Data",cursor="hand2",font=("coolvetica",15,"bold"),
+        b5_1=Button(bg_img,text="Train Data",cursor="hand2",command=self.train_data,font=("coolvetica",15,"bold"),
                         bg="darkblue",fg="white")
         b5_1.place(x=200,y=580,width=220,height=40)
 
 
 #Photos Button
         
-        img9=Image.open(r"C:\Users\shudh\Desktop\Face_Recognition_System\Images\opencv_face_reco_more_data.jpg")
+        img9=Image.open(r"Images\opencv_face_reco_more_data.jpg")
         img9=img9.resize((220,220),Image.ANTIALIAS)
         self.photoimg9=ImageTk.PhotoImage(img9)
 
-        b6=Button(bg_img,image=self.photoimg9,cursor="hand2")
+        b6=Button(bg_img,image=self.photoimg9,cursor="hand2",command=self.open_img)
         b6.place(x=500,y=380,width=220,height=220)
 
-        b6_1=Button(bg_img,text="Photos",cursor="hand2",font=("coolvetica",15,"bold"),
+        b6_1=Button(bg_img,text="Photos",cursor="hand2",command=self.open_img,font=("coolvetica",15,"bold"),
                         bg="darkblue",fg="white")
         b6_1.place(x=500,y=580,width=220,height=40)
 
 #Developer Button
         
-        img10=Image.open(r"C:\Users\shudh\Desktop\Face_Recognition_System\Images\Team-Management-Software-Development.jpg")
+        img10=Image.open(r"Images\Team-Management-Software-Development.jpg")
         img10=img10.resize((220,220),Image.ANTIALIAS)
         self.photoimg10=ImageTk.PhotoImage(img10)
 
@@ -150,7 +154,7 @@ class Face_Recognition_System:
 
 #Exit Button
         
-        img11=Image.open(r"C:\Users\shudh\Desktop\Face_Recognition_System\Images\exit.jpg")
+        img11=Image.open(r"Images\exit.jpg")
         img11=img11.resize((220,220),Image.ANTIALIAS)
         self.photoimg11=ImageTk.PhotoImage(img11)
 
@@ -161,7 +165,33 @@ class Face_Recognition_System:
                         bg="darkblue",fg="white")
         b8_1.place(x=1100,y=580,width=220,height=40)
 
+    def open_img(self):
+            os.startfile("data")
+#=====================================Functions buttons====================================================
+    def Student_details(self):
+            self.new_window=Toplevel(self.root)
+            self.app=Student(self.new_window)
 
+    def open_img(self):
+            os.startfile("data")
+
+    def train_data(self):
+            self.new_window=Toplevel(self.root)
+            self.app=Train(self.new_window)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 if __name__ == "__main__":
     root=Tk()
     obj=Face_Recognition_System(root)
