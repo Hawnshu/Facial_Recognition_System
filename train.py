@@ -66,7 +66,7 @@ class Train:
         ids=np.array(ids)
 
 
-# ==========Train the Classifier===========
+# ==========Train the Classifier==========
      
         clf=cv2.face.LBPHFaceRecognizer_create()
         clf.train(faces,ids)
