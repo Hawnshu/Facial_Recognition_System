@@ -29,7 +29,7 @@ class Student:
         self.var_teacher = StringVar()
         self.var_radio1 = StringVar()
 
-        # 1st Image
+# 1st Image
 
         img = Image.open(r"Images\face-recognition.png")
         img = img.resize((550, 130), Image.ANTIALIAS)
