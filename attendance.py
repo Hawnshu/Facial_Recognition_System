@@ -156,7 +156,7 @@ class Attendance:
 # Button Frame
 
         btn_frame = Frame(leftInside_frame, bd=2, relief=RIDGE, bg="white")
-        btn_frame.place(x=0, y=230, width=725, height=35)
+        btn_frame.place(x=80, y=230, width=540, height=35)
 
 # Import Button
         import_btn = Button(btn_frame, text="Import CSV",command=self.importCSV, width=17, font=(
@@ -168,15 +168,15 @@ class Attendance:
             "coolvetica", 12, "bold"), bg="blue", fg="white")
         export_btn.grid(row=0, column=1)
 
-# Update Button
-        update_btn = Button(btn_frame, text="Update", width=17, font=(
-            "coolvetica", 12, "bold"), bg="blue", fg="white")
-        update_btn.grid(row=0, column=2)
+# # Update Button
+#         update_btn = Button(btn_frame,command=self.update_data, text="Update", width=17, font=(
+#             "coolvetica", 12, "bold"), bg="blue", fg="white")
+#         update_btn.grid(row=0, column=2)
 
 # Reset Button
         reset_btn = Button(btn_frame,command=self.reset_data, text="Reset", width=17, font=(
             "coolvetica", 12, "bold"), bg="blue", fg="white")
-        reset_btn.grid(row=0, column=3)
+        reset_btn.grid(row=0, column=2)
 
 
 
@@ -291,28 +291,7 @@ class Attendance:
         self.var_atten_date.set("")
         self.var_atten_attendance.set("")
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         
 if __name__ == "__main__":
     root = Tk()

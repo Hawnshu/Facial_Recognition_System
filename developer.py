@@ -16,7 +16,7 @@ class Developer:
 
 # Title
 
-        title_lbl = Label(self.root, text="DEVELOPER", font=("coolvetica", 35, "bold"),
+        title_lbl = Label(self.root, text="DEVELOPERS", font=("coolvetica", 35, "bold"),
                           bg="white", fg="blue")
         title_lbl.place(x=0, y=0, width=1550, height=45)
 # Top Image
@@ -30,23 +30,17 @@ class Developer:
 
  # Frame
         main_frame = Frame(f_lbl, bd=2, bg="white")
-        main_frame.place(x=1000, y=0, width=500, height=600)
+        main_frame.place(x=500, y=20, width=500, height=500)
 
 
-        img_top1 = Image.open(r"Images\kiran.jpg")
-        img_top1 = img_top1.resize((200,200), Image.ANTIALIAS)
-        self.photoimg_top1 = ImageTk.PhotoImage(img_top1)
-
-        f_lbl = Label(main_frame, image=self.photoimg_top1)
-        f_lbl.place(x=300, y=0, width=200, height=200)
 
 
 #Developer info
-        dev_label = Label(main_frame, text="Hello we Trupti,Sudhanshu,Bipasha", font=(
+        dev_label = Label(main_frame, text="Developers: Shudhanshu Yadav,", font=(
             "coolvetica", 20, "bold"), bg="white", justify=LEFT)
         dev_label.place(x=0,y=5)
 
-        dev_label = Label(main_frame, text="Are full stack developers", font=(
+        dev_label = Label(main_frame, text="Trupti Yadav, Bipasha Reddy", font=(
             "coolvetica", 20, "bold"), bg="white", justify=LEFT)
         dev_label.place(x=0,y=40)
 
@@ -55,7 +49,7 @@ class Developer:
         self.photoimg2 = ImageTk.PhotoImage(img2)
 
         f_lbl = Label(main_frame, image=self.photoimg2)
-        f_lbl.place(x=0, y=210, width=500, height=390)
+        f_lbl.place(x=0, y=105, width=500, height=390)
 
 
 

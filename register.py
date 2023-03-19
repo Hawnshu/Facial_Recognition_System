@@ -130,7 +130,7 @@ class Register_Window:
         elif self.var_check.get()==0:
             messagebox.showerror("Error","please agree our terms and condition")
         else:
-            conn=mysql.connector.connect(host="localhost",user="root",password="Admin@123",database="face_recognizer")
+            conn=mysql.connector.connect(host="localhost",user="root",password="hawnshu",database="face_recognizer")
             my_cursor=conn.cursor()
             query=("select * from register where email=%s")
             value=(self.var_email.get(),)

@@ -1,0 +1,10 @@
+"filename", "language", "Python", "Markdown", "XML", "comment", "blank", "total"
+"c:\Users\shudh\Desktop\Face_Recognition_System\README.md", "Markdown", 0, 1, 0, 0, 0, 1
+"c:\Users\shudh\Desktop\Face_Recognition_System\attendance.py", "Python", 181, 0, 0, 32, 87, 300
+"c:\Users\shudh\Desktop\Face_Recognition_System\classifier.xml", "XML", 0, 0, 198831, 0, 1, 198832
+"c:\Users\shudh\Desktop\Face_Recognition_System\face_recognition.py", "Python", 98, 0, 0, 6, 51, 155
+"c:\Users\shudh\Desktop\Face_Recognition_System\haarcascade_frontalface_default.xml", "XML", 0, 0, 33271, 43, 1, 33315
+"c:\Users\shudh\Desktop\Face_Recognition_System\main.py", "Python", 120, 0, 0, 14, 73, 207
+"c:\Users\shudh\Desktop\Face_Recognition_System\student.py", "Python", 480, 0, 0, 50, 162, 692
+"c:\Users\shudh\Desktop\Face_Recognition_System\train.py", "Python", 52, 0, 0, 5, 26, 83
+"Total", "-", 931, 1, 232102, 150, 401, 233585
