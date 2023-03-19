@@ -9,6 +9,7 @@ class Register_Window:
         self.root=root
         self.root.title("Register")
         self.root.geometry("1600x900+0+0")
+        self.root.wm_iconbitmap("face.ico")
 
         #============variables=========
         self.var_fname=StringVar()

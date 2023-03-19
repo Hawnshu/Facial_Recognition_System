@@ -16,6 +16,7 @@ class Attendance:
         self.root = root
         self.root.geometry("1920x780+0+0")
         self.root.title("Face Recognition System")
+        self.root.wm_iconbitmap("face.ico")
 
 ######## Variables ########
         

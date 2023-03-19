@@ -9,6 +9,8 @@ class Student:
         self.root = root
         self.root.geometry("1920x780+0+0")
         self.root.title("Face Recognition System")
+        self.root.wm_iconbitmap("face.ico")
+        
         # =============variables=============
         self.var_dep = StringVar()
         self.var_course = StringVar()
